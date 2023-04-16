@@ -6,12 +6,12 @@ export default function RouteName() {
     <div className="bg-white text-blue-500 min-h-screen ">
       <Header />
       <div>
-        <h5>Hi I am Chiranjeev Mishra, an aspiring Blockchain Developer</h5>
+        <h5>This project was developed for GFG Hackathon and aims for creating a web-3 App which authenticates your
+          web2 financial details like your AADHAR,PAN etc details then mint you
+          an NFT after verification.</h5>
 
         <p>
-          This project aims for creating a web-3 App which authenticates your
-          web2 financial details like your AADHAR,PAN etc details then mint you
-          an NFT after verification.
+          
         </p>
       </div>
       <div className="absolute bottom-2">
