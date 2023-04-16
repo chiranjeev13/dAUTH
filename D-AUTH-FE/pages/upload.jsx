@@ -91,7 +91,7 @@ export default function RouteName() {
       );
     }
 
-    contractAddress = "0x1387938C0761C817d2474ae5e0F8BC243C2B4f17";
+    contractAddress = "0x741218817f8ed54229e4Cea24adDc8d72651c648";
     ABI = contr.abi;
     const provider_contract = new ethers.Contract(
       contractAddress,
@@ -318,12 +318,7 @@ export default function RouteName() {
       )}
       <div className="flex flex-col gap-2 items-center ">
         <div className="absolute bottom-2">
-          <a
-            className="hover:underline"
-            href="https://mumbai.polygonscan.com/address/0x1387938C0761C817d2474ae5e0F8BC243C2B4f17#code"
-          >
-            Deployed with ❤️ at Polygon Mumbai testnet Click to see the contract
-          </a>
+          
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ contract NFT_MINT is ERC721, Ownable {
   uint256 public totalSupply;
   mapping(address => uint256) private mintedPerWallet;
 
-  uint256 ver = 1;
+  uint256 ver = 2;
   string public baseUri;
   uint256 chk;
 
