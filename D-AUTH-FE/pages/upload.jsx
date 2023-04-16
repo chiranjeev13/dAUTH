@@ -35,7 +35,7 @@ export default function RouteName() {
       headers: {
         "content-type": "application/json",
         Token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYmM1MzZmYjYtMzg1ZC00YWZiLTkyMjctNDUxOWU1MjhlOGJjIn0.i5uKmf896BqgaSjZxh0aCFqLI0MRZnW_MjyuOAZ0PCI",
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWY4NTlkMmQtZTIzYy00NDc4LTkyOTYtOTBiOGNiYTQ1NTM1In0.BJQ1UewxEHfC8d4YJ1hsT46W4kw3EMv5l6_gmIMcAJE",
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
