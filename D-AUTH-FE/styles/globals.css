@@ -1,10 +1,26 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+  
+    background-color: #d28347;
+    color: #b04d4d;
+    
+    padding: 5;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+    .main {
+      min-height: 100vh;
+      padding: 4rem 0;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+ 
 
 a {
   color: inherit;
@@ -20,7 +36,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
+    color: rgb(218, 129, 78);
     background: black;
   }
 }
@@ -28,7 +44,7 @@ a {
   animation: blink 1s infinite;
 }
 .content{
-  background-color: white;
+  background-color: rgb(195, 69, 69);
   width: 300px;
   padding: 15px;
   border: 1px solid red;

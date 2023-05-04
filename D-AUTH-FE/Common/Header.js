@@ -1,28 +1,29 @@
 import { ConnectButton } from "web3uikit";
-import img from "../../NFT_metadata/images/tes.jpg";
+import styles from "../styles/Home.module.css";
+
 export default function Header() {
   return (
-    <div className="bg-gray-100 shadow-lg">
-      <div className="p-6 flex flex-row justify-between items-center">
-        <a href="/" className="text-3xl font-medium">
-          D-Auth
-        </a>
-        <div className="flex md:flex-row flex-col md:gap-12 gap-2 p-2">
-          <a href="/verify" className="hover:underline transition duration-200">
-            Verify
-          </a>
+    <div className="bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex items-center">
+            <a href="/" className={`${styles['header-link']} text-white text-3xl font-bold`}>
+              D-Auth
+            </a>
+          </div>
+          <div className="flex items-center">
+  <a href="/verify" className={`${styles['about-link']} text-white mr-4 hover:underline transition duration-200`} style={{ marginRight: '0.5cm' }}>
+    Verify
+  </a>
+  <a href="/about" className={`${styles['about-link']} text-white mr-8 hover:underline transition duration-200`} style={{ marginRight: '0.5cm' }}>
+    About Us
+  </a>
 
-          <a href="/about" className="hover:underline transition duration-200">
-            About Us
-          </a>
-          <a className="hover:underline transition duration-200">
-            <nav className="p-5 border-b-2 flex flex-row">
-              <h1 className="py-4 px-4 font-bold text-3xl"></h1>
-              <div className="ml-auto py-2 px-4">
-                <ConnectButton moralisAuth={false} />
-              </div>
-            </nav>
-          </a>
+
+            <div className="py-2 px-4">
+              <ConnectButton moralisAuth={false} className="text-white font-bold bg-purple-600 hover:bg-purple-700 py-2 px-4 rounded-md" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

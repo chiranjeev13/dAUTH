@@ -35,7 +35,7 @@ export default function RouteName() {
       headers: {
         "content-type": "application/json",
         Token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWY4NTlkMmQtZTIzYy00NDc4LTkyOTYtOTBiOGNiYTQ1NTM1In0.BJQ1UewxEHfC8d4YJ1hsT46W4kw3EMv5l6_gmIMcAJE",
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYmM1MzZmYjYtMzg1ZC00YWZiLTkyMjctNDUxOWU1MjhlOGJjIn0.i5uKmf896BqgaSjZxh0aCFqLI0MRZnW_MjyuOAZ0PCI",
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
@@ -91,7 +91,7 @@ export default function RouteName() {
       );
     }
 
-    contractAddress = "0x7fCf3161466Abb724a25cE39d350a925C08360eB";
+    contractAddress = "0x1387938C0761C817d2474ae5e0F8BC243C2B4f17";
     ABI = contr.abi;
     const provider_contract = new ethers.Contract(
       contractAddress,
@@ -157,75 +157,89 @@ export default function RouteName() {
     <div className="bg-white text-blue-500 min-h-screen relative">
       <Header />
       <div className="p-4">
-        <p className="text-3xl font-bold">Verify Aadhar</p>
-        <p>Get your aadhar verified and generate a NFT token</p>
+      <div className="flex flex-col items-center justify-center text-center">
+  <div className="bg-orange-500 rounded-full w-20 h-20 flex items-center justify-center mb-8 animate-pulse">
+    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 11l3-3m0 0l3 3m-3-3v8"></path>
+    </svg>
+  </div>
+  <p className="text-3xl font-bold text-gray-900 mb-4">Verify Aadhar</p>
+  <p className="text-lg text-gray-500 mb-8">Get your Aadhar verified and generate an NFT token</p>
+  
+</div>
+
         <div className="flex justify-between gap-2">
-          <p className="text-red-500">
-            <span className="blink"> Please use Mumbai Testnet network</span>
-          </p>
+         
           <div className="flex flex-col gap-2 items-left justify-right mb-12 border-2 border-red-500 p-2">
-            <p className="text-red-500">
-              <p>
-                <span className="blink"> Mumbai Testnet Config:</span>
-              </p>
-              RPC URL: https://rpc-mumbai.maticvigil.com
-              <br />
-              Chain ID: 80001
-              <br />
-              <a
-                className=" text-red-500 hover:underline"
-                href="https://mumbaifaucet.com"
-              >
-                Mumbai Testnet Faucet URL
-              </a>
-            </p>
+           
+              
+              
+              
+            
           </div>
         </div>
 
-        <div className="flex justify-center items-center pt-4">
-          <form className="flex flex-col gap-3 justify-center items-center w-full md:w-2/3">
-            <TextField
-              label="Name"
-              value={name}
-              fullWidth
-              onChange={(e) => setName(e.target.value)}
-            ></TextField>
+        <div className="flex justify-center items-center py-8">
+  <form className="flex flex-col gap-4 justify-center items-center w-full md:w-2/3 p-8 rounded-lg shadow-lg bg-white">
+    <h1 className="text-4xl font-bold text-center text-orange-500">Verify Aadhaar</h1>
 
-            <TextField
-              label="Aadhaar Number"
-              value={aadhar}
-              fullWidth
-              onChange={(e) => setAadhar(e.target.value)}
-            ></TextField>
+    <div className="w-full">
+      <label className="text-gray-700 font-semibold mb-2 block">Full Name</label>
+      <input
+        className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="text"
+        placeholder="Enter your full name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+    </div>
 
-            <TextField
-              InputLabelProps={{ shrink: true }}
-              label="DOB"
-              type="date"
-              fullWidth
-            ></TextField>
+    <div className="w-full">
+      <label className="text-gray-700 font-semibold mb-2 block">Aadhaar Number</label>
+      <input
+        className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="text"
+        placeholder="Enter your Aadhaar number"
+        value={aadhar}
+        onChange={(e) => setAadhar(e.target.value)}
+      />
+    </div>
 
-            <TextField
-              label="Number (India only, no need of '+91')"
-              value={mobile}
-              type="tel"
-              fullWidth
-              onChange={(e) => setNumber(e.target.value)}
-            ></TextField>
+    <div className="w-full">
+      <label className="text-gray-700 font-semibold mb-2 block">Date of Birth</label>
+      <input
+        className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="date"
+        //value={Dob}
+        //onChange={(e) => setDob(e.target.value)}
+      />
+    </div>
 
-            <Button
-              variant="contained"
-              fullWidth
-              color="secondary"
-              disabled={otpSent}
-              onClick={async () => {
-                setOtpSent(true);
-                handleSubmit();
-              }}
-              className="text-purple-800 hover:text-white md:w-auto w-full mt-4"
-            >
-              Send OTP
-            </Button>
+    <div className="w-full">
+      <label className="text-gray-700 font-semibold mb-2 block">Mobile Number</label>
+      <input
+        className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        type="tel"
+        placeholder="Enter your mobile number"
+        value={mobile}
+        onChange={(e) => setMobile(e.target.value)}
+      />
+    </div>
+
+    <button
+      className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline w-full md:w-auto mt-6"
+      type="button"
+      disabled={otpSent}
+      onClick={async () => {
+        setOtpSent(true);
+        handleSubmit();
+      }}
+    >
+      {otpSent ? 'OTP Sent' : 'Send OTP'}
+    </button>
+  
+
+
 
             {otpSent && <button>Resend OTP</button>}
 
@@ -242,18 +256,19 @@ export default function RouteName() {
                   onChange={(e) => setOtp(e.target.value)}
                 ></TextField>
 
-                <Button
-                  variant="contained"
-                  fullWidth
-                  color="secondary"
-                  onClick={() => {
-                    verifyOTP();
-                  }}
-                  disabled={otpStatus === "APPROVED"}
-                  className="text-purple-800 hover:text-white md:w-auto w-full mt-4"
-                >
-                  Submit
-                </Button>
+<Button
+  variant="contained"
+  fullWidth
+  color="secondary"
+  onClick={() => {
+    verifyOTP();
+  }}
+  disabled={otpStatus === "APPROVED"}
+  className="text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 py-3 rounded-md md:w-auto w-full mt-4 transition-all duration-300"
+>
+  Submit
+</Button>
+
 
                 {showStatus &&
                   (otpStatus === "APPROVED" ? (
@@ -318,7 +333,12 @@ export default function RouteName() {
       )}
       <div className="flex flex-col gap-2 items-center ">
         <div className="absolute bottom-2">
-          
+          {/* <a
+            className="hover:underline"
+            href="https://mumbai.polygonscan.com/address/0x1387938C0761C817d2474ae5e0F8BC243C2B4f17#code"
+          >
+            Deployed with ❤️ at Polygon Mumbai testnet Click to see the contract
+          </a> */}
         </div>
       </div>
     </div>
