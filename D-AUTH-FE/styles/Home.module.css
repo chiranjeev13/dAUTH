@@ -32,13 +32,13 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2.9rem;
+  font-size: 3.5rem;
   font-weight: 800;
   text-decoration: none;
 }
-.header-link:hover {
+/* .header-link:hover {
   text-decoration: underline;
-}
+} */
 .title {
   color: #e6782f;
   font-size: 2rem;
