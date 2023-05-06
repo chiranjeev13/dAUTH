@@ -61,47 +61,48 @@ export default function RouteName() {
             </div>
             <div className="flex flex-col md:flex-row justify-between gap-6 p-4">
               <div className="flex flex-col items-center  text-2xl font-bold text-orange-500">
-                <p>
+                <p className="pb-12">
                   Get your KYC documents Verified using our{" "}
                   <b>Zero Knowledge based Blockchain Technology</b>{" "}
                 </p>
                 What we do:
-                <div className="flex flex-col md:flex-row gap-10">
-                  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                    <div class="flex justify-center items-center w-full h-1/3">
+                <div className="flex flex-col gap-10 justify-center pt-12">
+                  <div class="w-full rounded overflow-hidden shadow-lg hover:shadow-orange-500 animation duration-500 flex flex-col md:flex-row gap-2 p-2 justify-center">
+                    <div class="flex justify-center items-center w-full md:w-1/3">
                       <Image
                         src={uploadImage}
+                        className="w-full md:w-1/3"
                         height="50px"
                         width="50px"
                         alt="Image"
                       />
                     </div>
-                    <div class="px-6 py-4">
+                    <div class="px-6 py-4 flex flex-col justify-center items-center w-full md:w-2/3">
                       <div class="font-bold text-lg mb-2">
                         Upload Information
                       </div>
-                      <p class="text-gray-700 text-base">
+                      <p class="text-white text-base">
                         Upload the required information and documents you need
                         to get verified wherever needed
                       </p>
                     </div>
                   </div>
 
-                  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                    <div class="flex justify-center w-full h-1/3">
+                  <div class="w-full rounded overflow-hidden justify-center shadow-lg hover:shadow-orange-500 animation duration-500 flex flex-col md:flex-row gap-2 p-2">
+                    <div class="flex justify-center w-full md:w-1/3">
                       <Image
                         width="200px"
                         height="200px"
-                        width="50px"
+                        className="w-full md:w-1/3"
                         src={veriImage}
                         alt="SImage"
                       />
                     </div>
-                    <div class="px-6 py-4">
+                    <div class="px-6 py-4 flex flex-col justify-center items-center w-full md:w-2/3">
                       <div class="font-bold text-xl mb-2">
                         Get Data Verified
                       </div>
-                      <p class="text-gray-700 text-base">
+                      <p class="text-white text-base">
                         Get the data you submitted verified using otp. Once the
                         data is verified, the D-Auth's system will initiate NFT
                         generation.
@@ -109,18 +110,19 @@ export default function RouteName() {
                     </div>
                   </div>
 
-                  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                    <div class="flex justify-center w-full h-1/3">
+                  <div class="w-full flex flex-col md:flex-row gap-2 rounded justify-center overflow-hidden shadow-lg animation duration-500 hover:shadow-orange-500 p-2">
+                    <div class="flex justify-center w-full md:w-1/3">
                       <Image
                         height="50px"
                         width="50px"
+                        className="w-full md:w-1/3"
                         src={nftImage}
                         alt="Image"
                       />
                     </div>
-                    <div class="px-6 py-4">
+                    <div class="px-6 py-4 flex flex-col items-center w-full md:w-2/3 justify-center">
                       <div class="font-bold text-xl mb-2">Recieve your NFT</div>
-                      <p class="text-gray-700 text-base">
+                      <p class="text-white text-base">
                         After the verification is completed, user will recieve
                         the NFT based signature for future KYC processing.
                       </p>
