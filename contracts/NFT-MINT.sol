@@ -21,12 +21,14 @@ contract NFT_MINT is ERC721, Ownable {
 
   uint cp = 0;
   uint256 public tokenId;
+  uint256 private dAppAddr;
 
-  constructor() ERC721("D-AUTH", "DAU") {
+  constructor(address restrict_dApp_addr) ERC721("D-AUTH", "DAU") {
     baseUri = "https://gateway.pinata.cloud/ipfs/QmPWzKZKYsxnXvYQX2PfN6ab7Y4qAcdNYJZUA4aCo19L3S/";
     tokenId = 0;
     totalSupply = 0;
     chk = 0;
+    dAppAddr = restrict_dApp_addr;
   }
 
   function updateBaseURI(string memory newbaseUri) private onlyOwner {
@@ -35,7 +37,8 @@ contract NFT_MINT is ERC721, Ownable {
 
   // Public Functions
 
-  function mint() external payable returns (uint256) {
+  function mint(address dApp_Addr) external payable returns (uint256) {
+    require(dAppAddr == dApp_Addr, "Restricted function call environment");
     require(!verified[msg.sender], "Already verified");
     require(isSaleActive, "The sale is paused.");
     require(
