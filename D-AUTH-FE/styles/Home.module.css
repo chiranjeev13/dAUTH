@@ -45,6 +45,28 @@
   font-weight: 800;
   animation: fadeIn 1s ease-in;
 }
+.loading {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.loading::after {
+  content: "";
+  display: inline-block;
+  width: 0px;
+  height: 100%;
+  vertical-align: bottom;
+  animation: loading 2s cubic-bezier(0.8, 0.5, 0.2, 1) forwards;
+}
+
+@keyframes loading {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
 
 @keyframes fadeIn {
   from {
@@ -161,6 +183,82 @@
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+/* confetti animation */
+@keyframes confetti {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+  }
+}
+
+.confetti {
+  position: absolute;
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #f1c40f;
+  box-shadow: 1px 1px 2px #888;
+  animation: confetti 8s ease-in-out infinite;
+}
+
+.confetti:nth-of-type(1) {
+  left: 10%;
+  animation-delay: 0.5s;
+}
+
+.confetti:nth-of-type(2) {
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.confetti:nth-of-type(3) {
+  left: 30%;
+  animation-delay: 1.5s;
+}
+
+.confetti:nth-of-type(4) {
+  left: 40%;
+  animation-delay: 2s;
+}
+
+.confetti:nth-of-type(5) {
+  left: 50%;
+  animation-delay: 2.5s;
+}
+
+.confetti:nth-of-type(6) {
+  left: 60%;
+  animation-delay: 3s;
+}
+
+.confetti:nth-of-type(7) {
+  left: 70%;
+  animation-delay: 3.5s;
+}
+
+.confetti:nth-of-type(8) {
+  left: 80%;
+  animation-delay: 4s;
+}
+
+.confetti:nth-of-type(9) {
+  left: 90%;
+  animation-delay: 4.5s;
+}
+
+/* modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  max-width: 500px;
+  max-height: 500px;
 }
 
 @media (max-width: 600px) {
