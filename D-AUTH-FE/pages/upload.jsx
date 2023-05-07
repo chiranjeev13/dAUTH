@@ -154,92 +154,104 @@ export default function RouteName() {
   };
 
   return (
-    <div className="bg-white text-blue-500 min-h-screen relative">
+    <div className="bg-gradient-to-tr from-[#45647f] via-[#15135a] to-[#09072e] text-blue-500 min-h-screen relative">
       <Header />
       <div className="p-4">
-      <div className="flex flex-col items-center justify-center text-center">
-  <div className="bg-orange-500 rounded-full w-20 h-20 flex items-center justify-center mb-8 animate-pulse">
-    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 11l3-3m0 0l3 3m-3-3v8"></path>
-    </svg>
-  </div>
-  <p className="text-3xl font-bold text-gray-900 mb-4">Verify Aadhar</p>
-  <p className="text-lg text-gray-500 mb-8">Get your Aadhar verified and generate an NFT token</p>
-  
-</div>
+        <div className="flex flex-col items-center justify-center text-center">
+          <div className="bg-orange-500 rounded-full w-20 h-20 flex items-center justify-center mb-8 animate-pulse">
+            <svg
+              className="w-10 h-10 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 11l3-3m0 0l3 3m-3-3v8"
+              ></path>
+            </svg>
+          </div>
+          <p className="text-3xl font-bold text-gray-900 mb-4">Verify Aadhar</p>
+          <p className="text-lg text-gray-500 mb-8">
+            Get your Aadhar verified and generate an NFT token
+          </p>
+        </div>
 
         <div className="flex justify-between gap-2">
-         
-          <div className="flex flex-col gap-2 items-left justify-right mb-12 border-2 border-red-500 p-2">
-           
-              
-              
-              
-            
-          </div>
+          <div className="flex flex-col gap-2 items-left justify-right mb-12 border-2 border-red-500 p-2"></div>
         </div>
 
         <div className="flex justify-center items-center py-8">
-  <form className="flex flex-col gap-4 justify-center items-center w-full md:w-2/3 p-8 rounded-lg shadow-lg bg-white">
-    <h1 className="text-4xl font-bold text-center text-orange-500">Verify Aadhaar</h1>
+          <form className="flex flex-col gap-4 justify-center items-center w-full md:w-2/3 p-8 rounded-lg shadow-lg bg-white">
+            <h1 className="text-4xl font-bold text-center text-orange-500">
+              Verify Aadhaar
+            </h1>
 
-    <div className="w-full">
-      <label className="text-gray-700 font-semibold mb-2 block">Full Name</label>
-      <input
-        className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        type="text"
-        placeholder="Enter your full name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-    </div>
+            <div className="w-full">
+              <label className="text-gray-700 font-semibold mb-2 block">
+                Full Name
+              </label>
+              <input
+                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Enter your full name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
 
-    <div className="w-full">
-      <label className="text-gray-700 font-semibold mb-2 block">Aadhaar Number</label>
-      <input
-        className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        type="text"
-        placeholder="Enter your Aadhaar number"
-        value={aadhar}
-        onChange={(e) => setAadhar(e.target.value)}
-      />
-    </div>
+            <div className="w-full">
+              <label className="text-gray-700 font-semibold mb-2 block">
+                Aadhaar Number
+              </label>
+              <input
+                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Enter your Aadhaar number"
+                value={aadhar}
+                onChange={(e) => setAadhar(e.target.value)}
+              />
+            </div>
 
-    <div className="w-full">
-      <label className="text-gray-700 font-semibold mb-2 block">Date of Birth</label>
-      <input
-        className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        type="date"
-        //value={Dob}
-        //onChange={(e) => setDob(e.target.value)}
-      />
-    </div>
+            <div className="w-full">
+              <label className="text-gray-700 font-semibold mb-2 block">
+                Date of Birth
+              </label>
+              <input
+                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="date"
+                //value={Dob}
+                //onChange={(e) => setDob(e.target.value)}
+              />
+            </div>
 
-    <div className="w-full">
-      <label className="text-gray-700 font-semibold mb-2 block">Mobile Number</label>
-      <input
-        className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-        type="tel"
-        placeholder="Enter your mobile number"
-        value={mobile}
-        onChange={(e) => setMobile(e.target.value)}
-      />
-    </div>
+            <div className="w-full">
+              <label className="text-gray-700 font-semibold mb-2 block">
+                Mobile Number
+              </label>
+              <input
+                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="tel"
+                placeholder="Enter your mobile number"
+                value={mobile}
+                onChange={(e) => setMobile(e.target.value)}
+              />
+            </div>
 
-    <button
-      className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline w-full md:w-auto mt-6"
-      type="button"
-      disabled={otpSent}
-      onClick={async () => {
-        setOtpSent(true);
-        handleSubmit();
-      }}
-    >
-      {otpSent ? 'OTP Sent' : 'Send OTP'}
-    </button>
-  
-
-
+            <button
+              className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline w-full md:w-auto mt-6"
+              type="button"
+              disabled={otpSent}
+              onClick={async () => {
+                setOtpSent(true);
+                handleSubmit();
+              }}
+            >
+              {otpSent ? "OTP Sent" : "Send OTP"}
+            </button>
 
             {otpSent && <button>Resend OTP</button>}
 
@@ -256,19 +268,18 @@ export default function RouteName() {
                   onChange={(e) => setOtp(e.target.value)}
                 ></TextField>
 
-<Button
-  variant="contained"
-  fullWidth
-  color="secondary"
-  onClick={() => {
-    verifyOTP();
-  }}
-  disabled={otpStatus === "APPROVED"}
-  className="text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 py-3 rounded-md md:w-auto w-full mt-4 transition-all duration-300"
->
-  Submit
-</Button>
-
+                <Button
+                  variant="contained"
+                  fullWidth
+                  color="secondary"
+                  onClick={() => {
+                    verifyOTP();
+                  }}
+                  disabled={otpStatus === "APPROVED"}
+                  className="text-white bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 py-3 rounded-md md:w-auto w-full mt-4 transition-all duration-300"
+                >
+                  Submit
+                </Button>
 
                 {showStatus &&
                   (otpStatus === "APPROVED" ? (
