@@ -9,6 +9,7 @@ import { ethers } from "ethers";
 import Image from "next/image";
 import React from "react";
 import Popup from "reactjs-popup";
+import  styles from "../styles/Home.module.css";
 
 export default function RouteName() {
   const [name, setName] = useState("");
@@ -174,8 +175,8 @@ export default function RouteName() {
               ></path>
             </svg>
           </div>
-          <p className="text-3xl font-bold text-gray-900 mb-4">Verify Aadhar</p>
-          <p className="text-lg text-gray-500 mb-8">
+          <p className="text-3xl font-bold text-white mb-4">Verify Aadhar</p>
+          <p className="text-lg text-gray-300 mb-8">
             Get your Aadhar verified and generate an NFT token
           </p>
         </div>
@@ -320,16 +321,21 @@ export default function RouteName() {
         )}
       </div>
       {showImage && (
-        <div>
-          <div className="flex flex-col gap-2 items-center justify-center mb-12">
-            <p>Your NFT</p>
-
-            <img src={imageURL} alt="" width={350} height={350} />
-
-            <a href={URI}>Your MetaData click to see...</a>
-          </div>
+  <div>
+    <div className="flex flex-col gap-2 items-center justify-center mb-12">
+      <div className={`${styles.confettiWrapper} fixed inset-0 z-50`}>
+        <Confetti width={window.innerWidth} height={window.innerHeight} />
+      </div>
+      <div className={`${styles.modal} fixed inset-0 bg-opacity-50`}>
+        <div className={`${styles.modalContent} p-5 rounded-lg bg-white`}>
+          <p>Your NFT</p>
+          <img src={imageURL} alt="" width={350} height={350} />
+          <a href={URI}>Your MetaData click to see...</a>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
       {OpenSea && (
         <div>
           <div className="flex flex-col gap-2 items-center justify-center mb-12">

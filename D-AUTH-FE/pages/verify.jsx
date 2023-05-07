@@ -58,54 +58,59 @@ export default function RouteName() {
   };
 
   return (
-    <div className="bg-white text-blue-500 min-h-screen">
+    <div className="bg-gradient-to-tr from-[#636161] via-[#313131] to-[#000000]">
+    <div className="bg text-orange-500 min-h-screen">
       <Header />
       <div className="p-4">
         <img src={img} alt="" />
-        <p className="text-3xl font-bold">Verify NFT</p>
-        <p>Check if you are verified or not!!</p>
+        <p className="text-3xl font-bold text-orange-500">Verify NFT</p>
+        <p className="text-2xl font-bold text-orange-500">Check if you are verified or not!!</p>
         <div className="flex justify-center items-center pt-4">
-          <form className="flex flex-col gap-3 justify-center items-center w-full md:w-2/3">
-            <TextField
-              label="Address"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              fullWidth
-            ></TextField>
-            <Button
-              variant="contained"
-              fullWidth
-              onClick={async () => {
-                try {
-                  await verify();
-                } catch (error) {
-                  alert("WRONG ADDRESS ENTERED!!");
-                }
+          <form className="flex flex-col gap-3 justify-center items-center w-full md:w-2/3 text-orange-500">
+          
 
-                console.log(address);
-                console.log("success");
-              }}
-              color="secondary"
-              className="text-purple-800 hover:text-white md:w-auto w-full mt-4"
-            >
-              Verify
-            </Button>
+<TextField
+  id="outlined-basic"
+  variant="outlined"
+  label="Address"
+  value={address}
+  onChange={(e) => setAddress(e.target.value)}
+  fullWidth
+  style={{ backgroundColor: "#FFF", borderRadius: "5px", color: "#FFA500" }}
+/>
+
+            
+
+<Button
+  variant="contained"
+  fullWidth
+  onClick={async () => {
+    try {
+      await verify();
+    } catch (error) {
+      alert("WRONG ADDRESS ENTERED!!");
+    }
+
+    console.log(address);
+    console.log("success");
+  }}
+  color="secondary"
+  style={{ backgroundColor: "#CC5500", borderRadius: "25px" }}
+>
+  Verify
+</Button>
+
             <p>Verification status : {bolval}</p>
             Token Id : {tkid}
           </form>
         </div>
         <div className="flex flex-col gap-2 items-center ">
           <div className=" justify-center absolute bottom-2">
-            <a
-              className="hover:underline"
-              href="https://mumbai.polygonscan.com/address/0x1387938C0761C817d2474ae5e0F8BC243C2B4f17#code"
-            >
-              Deployed with ❤️ at Polygon Mumbai testnet Click to see the
-              contract
-            </a>
+            
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
