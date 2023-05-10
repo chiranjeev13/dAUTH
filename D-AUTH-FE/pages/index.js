@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Header from "../Common/Header";
 import homeImage from "./Images/home1.gif";
 import uploadImage from "./Images/upImage.webp";
-import veriImage from "./Images/download.gif";
+import veriImage from "./Images/download1.gif";
 import nftImage from "./Images/test3.png";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
