@@ -66,7 +66,7 @@ export default function RouteName() {
         <p className="text-3xl font-bold text-orange-500">Verify NFT</p>
         <p className="text-2xl font-bold text-orange-500">Check if you are verified or not!!</p>
         <div className="flex justify-center items-center pt-4">
-          <form className="flex flex-col gap-3 justify-center items-center w-full md:w-2/3 text-orange-500">
+          <form className="flex flex-col gap-3 justify-center items-center w-full sm:w-2/3 text-orange-500">
           
 
 <TextField
@@ -76,7 +76,7 @@ export default function RouteName() {
   value={address}
   onChange={(e) => setAddress(e.target.value)}
   fullWidth
-  style={{ backgroundColor: "#FFF", borderRadius: "5px", color: "#FFA500" }}
+  style={{ backgroundColor: "#FFFF", borderRadius: "5px", color: "#f54e42" }}
 />
 
             

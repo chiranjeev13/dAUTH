@@ -36,7 +36,7 @@ export default function RouteName() {
       headers: {
         "content-type": "application/json",
         Token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYmM1MzZmYjYtMzg1ZC00YWZiLTkyMjctNDUxOWU1MjhlOGJjIn0.i5uKmf896BqgaSjZxh0aCFqLI0MRZnW_MjyuOAZ0PCI",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
@@ -62,7 +62,7 @@ export default function RouteName() {
       headers: {
         "content-type": "application/json",
         Token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYmM1MzZmYjYtMzg1ZC00YWZiLTkyMjctNDUxOWU1MjhlOGJjIn0.i5uKmf896BqgaSjZxh0aCFqLI0MRZnW_MjyuOAZ0PCI",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
@@ -180,6 +180,24 @@ export default function RouteName() {
             Get your Aadhar verified and generate an NFT token
           </p>
         </div>
+        <div className="flex flex-col items-center justify-center">
+
+        <button className="flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white text-lg py-2 px-4 rounded focus:outline-none">
+      <svg
+        className="w-6 h-6 mr-2"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+      >
+        <path
+          fillRule="evenodd"
+          d="M3 5v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm3 2a1 1 0 0 1 2 0v6a1 1 0 1 1-2 0V7zm6 0a1 1 0 0 1 2 0v6a1 1 0 1 1-2 0V7zm4 0a1 1 0 0 1 2 0v6a1 1 0 0 1-2 0V7z"
+        />
+      </svg>
+      Scan Aadhar
+    </button>
+        </div>
+
 
         <div className="flex justify-between gap-2">
           <div className="flex flex-col gap-2 items-left justify-right mb-12 border-2 border-red-500 p-2"></div>
@@ -238,7 +256,7 @@ export default function RouteName() {
                 type="tel"
                 placeholder="Enter your mobile number"
                 value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
+                onChange={(e) => setNumber(e.target.value)}
               />
             </div>
 
@@ -299,10 +317,12 @@ export default function RouteName() {
         {showStatus && otpStatus === "APPROVED" && (
           <div className="flex flex-col gap-2 items-center justify-center">
             <Button
+              
               variant="contained"
               color="primary"
-              fullWidth
-              className="text-purple-800 hover:text-white w-full md:w-2/5"
+
+              
+              className="text-white bg-orange-500 hover:bg-orange-600 w-full md:w-2/5"
               onClick={async () => {
                 await mint();
                 console.log(imgURL);
@@ -348,16 +368,16 @@ export default function RouteName() {
           </div>
         </div>
       )}
-      <div className="flex flex-col gap-2 items-center ">
-        <div className="absolute bottom-2">
+      {/* <div className="flex flex-col gap-2 items-center ">
+        <div className="absolute bottom-2"> */}
           {/* <a
             className="hover:underline"
             href="https://mumbai.polygonscan.com/address/0x1387938C0761C817d2474ae5e0F8BC243C2B4f17#code"
           >
             Deployed with ❤️ at Polygon Mumbai testnet Click to see the contract
           </a> */}
-        </div>
       </div>
-    </div>
+      //</div>
+    //</div>
   );
 }
