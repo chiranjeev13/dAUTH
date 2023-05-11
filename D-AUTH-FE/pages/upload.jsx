@@ -40,7 +40,7 @@ export default function RouteName() {
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
-      data: `{"originator":"SignOTP","recipient":"+91${mobile}","content":"OTP verification code is: {}","expiry":"600","data_coding":"text"}`,
+      data: `{"originator":"SignOTP","recipient":"+91${mobile}","content":"OTP verification code is for D-Auth is: {}","expiry":"600","data_coding":"text"}`,
     };
 
     // posting the request
@@ -200,12 +200,13 @@ export default function RouteName() {
 
 
         <div className="flex justify-between gap-2">
+          
           <div className="flex flex-col gap-2 items-left justify-right mb-12 border-2 border-red-500 p-2"></div>
         </div>
 
         <div className="flex justify-center items-center py-8">
           <form className="flex flex-col gap-4 justify-center items-center w-full md:w-2/3 p-8 rounded-lg shadow-lg bg-white">
-            <h1 className="text-4xl font-bold text-center text-orange-500">
+            <h1 className="text-4xl font-bold text-center text-orange-500 hover:animate-bounce">
               Verify Aadhaar
             </h1>
 
@@ -214,9 +215,10 @@ export default function RouteName() {
                 Full Name
               </label>
               <input
-                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Enter your full name"
+                style={{ backgroundColor: 'white' }}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -227,9 +229,10 @@ export default function RouteName() {
                 Aadhaar Number
               </label>
               <input
-                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Enter your Aadhaar number"
+                style={{ backgroundColor: 'white' }}
                 value={aadhar}
                 onChange={(e) => setAadhar(e.target.value)}
               />
@@ -240,8 +243,9 @@ export default function RouteName() {
                 Date of Birth
               </label>
               <input
-                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="date"
+                style={{ backgroundColor: 'white' }}
                 //value={Dob}
                 //onChange={(e) => setDob(e.target.value)}
               />
@@ -252,9 +256,10 @@ export default function RouteName() {
                 Mobile Number
               </label>
               <input
-                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="tel"
                 placeholder="Enter your mobile number"
+                style={{ backgroundColor: 'white' }}
                 value={mobile}
                 onChange={(e) => setNumber(e.target.value)}
               />

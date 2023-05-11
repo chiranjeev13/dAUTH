@@ -104,6 +104,11 @@
   align-items: center;
   flex-grow: 1;
 }
+.white-textfield {
+  background-color: white;
+  /* Add any other styles you want for the white TextField */
+}
+
 
 .title a {
   color: #0070f3;
