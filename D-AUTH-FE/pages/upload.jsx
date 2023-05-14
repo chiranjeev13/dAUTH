@@ -1,7 +1,8 @@
 import { Button, TextField } from "@mui/material";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useState ,useRef} from "react";
 import Header from "../Common/Header";
+
 const axios = require("axios").default;
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import contr from "../../artifacts/contracts/NFT-MINT.sol/NFT_MINT.json";
@@ -9,11 +10,13 @@ import { ethers } from "ethers";
 import Image from "next/image";
 import React from "react";
 import Popup from "reactjs-popup";
-import styles from "../styles/Home.module.css";
+import  styles from "../styles/Home.module.css";
+import YourComponent from "./scanning";
 
 export default function RouteName() {
   const [name, setName] = useState("");
   const [aadhar, setAadhar] = useState("");
+  const [dob, setDob] = useState("");
   const [mobile, setNumber] = useState();
   const [otpSent, setOtpSent] = useState(false);
   const [otp, setOtp] = useState("");
@@ -181,23 +184,11 @@ export default function RouteName() {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <button className="flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white text-lg py-2 px-4 rounded focus:outline-none">
-            <svg
-              className="w-6 h-6 mr-2"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M3 5v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm3 2a1 1 0 0 1 2 0v6a1 1 0 1 1-2 0V7zm6 0a1 1 0 0 1 2 0v6a1 1 0 1 1-2 0V7zm4 0a1 1 0 0 1 2 0v6a1 1 0 0 1-2 0V7z"
-              />
-            </svg>
-            Scan Aadhar
-          </button>
+          <YourComponent setAadhar={setAadhar} setDob={setDob} setName={setName} />
         </div>
 
         <div className="flex justify-between gap-2">
+          
           <div className="flex flex-col gap-2 items-left justify-right mb-12 border-2 border-red-500 p-2"></div>
         </div>
 
@@ -215,7 +206,7 @@ export default function RouteName() {
                 className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Enter your full name"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: 'white' }}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -229,7 +220,7 @@ export default function RouteName() {
                 className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Enter your Aadhaar number"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: 'white' }}
                 value={aadhar}
                 onChange={(e) => setAadhar(e.target.value)}
               />
@@ -242,9 +233,9 @@ export default function RouteName() {
               <input
                 className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="date"
-                style={{ backgroundColor: "white" }}
-                //value={Dob}
-                //onChange={(e) => setDob(e.target.value)}
+                style={{ backgroundColor: 'white' }}
+                value={dob}
+                onChange={(e) => setDob(e.target.value)}
               />
             </div>
 
@@ -256,7 +247,7 @@ export default function RouteName() {
                 className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="tel"
                 placeholder="Enter your mobile number"
-                style={{ backgroundColor: "white" }}
+                style={{ backgroundColor: 'white' }}
                 value={mobile}
                 onChange={(e) => setNumber(e.target.value)}
               />
