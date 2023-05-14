@@ -9,7 +9,7 @@ import { ethers } from "ethers";
 import Image from "next/image";
 import React from "react";
 import Popup from "reactjs-popup";
-import  styles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 
 export default function RouteName() {
   const [name, setName] = useState("");
@@ -36,11 +36,11 @@ export default function RouteName() {
       headers: {
         "content-type": "application/json",
         Token:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
-      data: `{"originator":"SignOTP","recipient":"+91${mobile}","content":"OTP verification code is: {}","expiry":"600","data_coding":"text"}`,
+      data: `{"originator":"SignOTP","recipient":"+91${mobile}","content":"OTP verification code is for D-Auth is: {}","expiry":"600","data_coding":"text"}`,
     };
 
     // posting the request
@@ -62,7 +62,7 @@ export default function RouteName() {
       headers: {
         "content-type": "application/json",
         Token:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
@@ -181,23 +181,21 @@ export default function RouteName() {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center">
-
-        <button className="flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white text-lg py-2 px-4 rounded focus:outline-none">
-      <svg
-        className="w-6 h-6 mr-2"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-      >
-        <path
-          fillRule="evenodd"
-          d="M3 5v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm3 2a1 1 0 0 1 2 0v6a1 1 0 1 1-2 0V7zm6 0a1 1 0 0 1 2 0v6a1 1 0 1 1-2 0V7zm4 0a1 1 0 0 1 2 0v6a1 1 0 0 1-2 0V7z"
-        />
-      </svg>
-      Scan Aadhar
-    </button>
+          <button className="flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white text-lg py-2 px-4 rounded focus:outline-none">
+            <svg
+              className="w-6 h-6 mr-2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 5v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1zm3 2a1 1 0 0 1 2 0v6a1 1 0 1 1-2 0V7zm6 0a1 1 0 0 1 2 0v6a1 1 0 1 1-2 0V7zm4 0a1 1 0 0 1 2 0v6a1 1 0 0 1-2 0V7z"
+              />
+            </svg>
+            Scan Aadhar
+          </button>
         </div>
-
 
         <div className="flex justify-between gap-2">
           <div className="flex flex-col gap-2 items-left justify-right mb-12 border-2 border-red-500 p-2"></div>
@@ -205,7 +203,7 @@ export default function RouteName() {
 
         <div className="flex justify-center items-center py-8">
           <form className="flex flex-col gap-4 justify-center items-center w-full md:w-2/3 p-8 rounded-lg shadow-lg bg-white">
-            <h1 className="text-4xl font-bold text-center text-orange-500">
+            <h1 className="text-4xl font-bold text-center text-orange-500 hover:animate-bounce">
               Verify Aadhaar
             </h1>
 
@@ -214,9 +212,10 @@ export default function RouteName() {
                 Full Name
               </label>
               <input
-                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Enter your full name"
+                style={{ backgroundColor: "white" }}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -227,9 +226,10 @@ export default function RouteName() {
                 Aadhaar Number
               </label>
               <input
-                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="text"
                 placeholder="Enter your Aadhaar number"
+                style={{ backgroundColor: "white" }}
                 value={aadhar}
                 onChange={(e) => setAadhar(e.target.value)}
               />
@@ -240,8 +240,9 @@ export default function RouteName() {
                 Date of Birth
               </label>
               <input
-                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="date"
+                style={{ backgroundColor: "white" }}
                 //value={Dob}
                 //onChange={(e) => setDob(e.target.value)}
               />
@@ -252,9 +253,10 @@ export default function RouteName() {
                 Mobile Number
               </label>
               <input
-                className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="w-full border rounded-md py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
                 type="tel"
                 placeholder="Enter your mobile number"
+                style={{ backgroundColor: "white" }}
                 value={mobile}
                 onChange={(e) => setNumber(e.target.value)}
               />
@@ -317,11 +319,8 @@ export default function RouteName() {
         {showStatus && otpStatus === "APPROVED" && (
           <div className="flex flex-col gap-2 items-center justify-center">
             <Button
-              
               variant="contained"
               color="primary"
-
-              
               className="text-white bg-orange-500 hover:bg-orange-600 w-full md:w-2/5"
               onClick={async () => {
                 await mint();
@@ -341,21 +340,21 @@ export default function RouteName() {
         )}
       </div>
       {showImage && (
-  <div>
-    <div className="flex flex-col gap-2 items-center justify-center mb-12">
-      <div className={`${styles.confettiWrapper} fixed inset-0 z-50`}>
-        <Confetti width={window.innerWidth} height={window.innerHeight} />
-      </div>
-      <div className={`${styles.modal} fixed inset-0 bg-opacity-50`}>
-        <div className={`${styles.modalContent} p-5 rounded-lg bg-white`}>
-          <p>Your NFT</p>
-          <img src={imageURL} alt="" width={350} height={350} />
-          <a href={URI}>Your MetaData click to see...</a>
+        <div>
+          <div className="flex flex-col gap-2 items-center justify-center mb-12">
+            <div className={`${styles.confettiWrapper} fixed inset-0 z-50`}>
+              <Confetti width={window.innerWidth} height={window.innerHeight} />
+            </div>
+            <div className={`${styles.modal} fixed inset-0 bg-opacity-50`}>
+              <div className={`${styles.modalContent} p-5 rounded-lg bg-white`}>
+                <p>Your NFT</p>
+                <img src={imageURL} alt="" width={350} height={350} />
+                <a href={URI}>Your MetaData click to see...</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
       {OpenSea && (
         <div>
           <div className="flex flex-col gap-2 items-center justify-center mb-12">
@@ -370,14 +369,14 @@ export default function RouteName() {
       )}
       {/* <div className="flex flex-col gap-2 items-center ">
         <div className="absolute bottom-2"> */}
-          {/* <a
+      {/* <a
             className="hover:underline"
             href="https://mumbai.polygonscan.com/address/0x1387938C0761C817d2474ae5e0F8BC243C2B4f17#code"
           >
             Deployed with ❤️ at Polygon Mumbai testnet Click to see the contract
           </a> */}
-      </div>
-      //</div>
+    </div>
+    //</div>
     //</div>
   );
 }
