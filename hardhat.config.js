@@ -43,6 +43,7 @@ module.exports = {
     localhost: {
       url:"http://34.131.77.36/",
       chainId: 1337,
+      accounts: [PRIVATE_KEY],
     },
     fantom: {
       chainId: 4002,

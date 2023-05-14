@@ -92,7 +92,7 @@ export default function RouteName() {
       );
     }
 
-    contractAddress = "0x1387938C0761C817d2474ae5e0F8BC243C2B4f17";
+    contractAddress = "0x0138A6124eCb4741058Faeef5e38C26638a4Ae26";
     ABI = contr.abi;
     const provider_contract = new ethers.Contract(
       contractAddress,
