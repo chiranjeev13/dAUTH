@@ -14,13 +14,16 @@
     "@mui/material": "^5.10.13",
     "moralis": "^2.7.1",
     "moralis-v1": "^1.12.0",
+    "natural": "^6.3.0",
     "next": "^13.1.1",
     "react": "^18.2.0",
     "react-animated-popup": "^0.1.8",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-moralis": "^1.4.2",
+    "react-webcam": "^7.0.1",
     "reactjs-popup": "^2.0.5",
+    "tesseract.js": "^2.1.1",
     "web3uikit": "^0.1.159"
   },
   "devDependencies": {
