@@ -120,7 +120,7 @@ export default function RouteName() {
     const newsignedContract = new ethers.Contract(contractAddress, ABI, signer);
     //console.log(await newsignedContract.getTokenId());
     try {
-      const mintedtx = await newsignedContract.mint();
+      const mintedtx = await newsignedContract.mint("20635f71a89de4d23bbd00ce1fa7419c93f6111f4db175c38ea03d8efc3194de");
 
       const getTokenId = await newsignedContract.getTokenId();
       const tokenId = getTokenId._hex;
