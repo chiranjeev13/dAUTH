@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/contracts/NFT-MINT.sol": {
-      "lastModificationDate": 1681658794465,
-      "contentHash": "746e4d51236c3fa8cb44a6a379761bfa",
+      "lastModificationDate": 1683805970249,
+      "contentHash": "35064980da78df9ffc5ac0ee86228007",
       "sourceName": "contracts/NFT-MINT.sol",
       "solcConfig": {
         "version": "0.8.9",
@@ -37,7 +37,8 @@
       },
       "imports": [
         "@openzeppelin/contracts/access/Ownable.sol",
-        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "./stringUtils.sol"
       ],
       "versionPragmas": [
         "^0.8.9"
@@ -46,10 +47,10 @@
         "NFT_MINT"
       ]
     },
-    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1681585203984,
-      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
-      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/contracts/stringUtils.sol": {
+      "lastModificationDate": 1683806954448,
+      "contentHash": "ff9d7dbe0981c98debea209a47330a76",
+      "sourceName": "contracts/stringUtils.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -80,14 +81,10 @@
           }
         }
       },
-      "imports": [
-        "../utils/Context.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
+      "imports": [],
+      "versionPragmas": [],
       "artifacts": [
-        "Ownable"
+        "StringUtils"
       ]
     },
     "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
@@ -140,6 +137,92 @@
         "ERC721"
       ]
     },
+    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1681585203984,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1681585204065,
+      "contentHash": "cf46906c4035f51639a22265066a9e78",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
     "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1681585204064,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
@@ -182,10 +265,10 @@
         "Context"
       ]
     },
-    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/utils/Address.sol": {
-      "lastModificationDate": 1681585204032,
-      "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
-      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+      "lastModificationDate": 1681585203926,
+      "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
       "solcConfig": {
         "version": "0.8.9",
         "settings": {
@@ -216,12 +299,14 @@
           }
         }
       },
-      "imports": [],
+      "imports": [
+        "../IERC721.sol"
+      ],
       "versionPragmas": [
-        "^0.8.1"
+        "^0.8.0"
       ],
       "artifacts": [
-        "Address"
+        "IERC721Metadata"
       ]
     },
     "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol": {
@@ -310,92 +395,6 @@
         "IERC721"
       ]
     },
-    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/utils/Strings.sol": {
-      "lastModificationDate": 1681585204065,
-      "contentHash": "cf46906c4035f51639a22265066a9e78",
-      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Strings"
-      ]
-    },
-    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
-      "lastModificationDate": 1681585203926,
-      "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
-      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-      "solcConfig": {
-        "version": "0.8.9",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../IERC721.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC721Metadata"
-      ]
-    },
     "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/utils/introspection/ERC165.sol": {
       "lastModificationDate": 1681585204041,
       "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
@@ -438,6 +437,48 @@
       ],
       "artifacts": [
         "ERC165"
+      ]
+    },
+    "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1681585204032,
+      "contentHash": "c476b3895a94798b88a4bb97399e6dfe",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
       ]
     },
     "/Users/chiranjeevmishra/Desktop/WEB-3/dAUTH/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {

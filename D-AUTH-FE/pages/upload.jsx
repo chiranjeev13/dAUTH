@@ -13,7 +13,6 @@ import Popup from "reactjs-popup";
 import  styles from "../styles/Home.module.css";
 import YourComponent from "./scanning";
 
-
 export default function RouteName() {
   const [name, setName] = useState("");
   const [aadhar, setAadhar] = useState("");
@@ -40,7 +39,7 @@ export default function RouteName() {
       headers: {
         "content-type": "application/json",
         Token:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
@@ -66,7 +65,7 @@ export default function RouteName() {
       headers: {
         "content-type": "application/json",
         Token:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhdXRoLWJhY2tlbmQ6YXBwIiwic3ViIjoiYWQ3YWIzODQtZjVjZi00N2NjLTkzNmItNmQ4YWY2YjBlZTI4In0.2-ICcYNn6uoG7lThNtXoffVUt5j_CcXuvrpas39zObs",
         "X-RapidAPI-Key": "e1588b364fmsh4e12bef5704e29ap107f8djsne8d9cc254653",
         "X-RapidAPI-Host": "d7-verify.p.rapidapi.com",
       },
@@ -96,7 +95,7 @@ export default function RouteName() {
       );
     }
 
-    contractAddress = "0x1387938C0761C817d2474ae5e0F8BC243C2B4f17";
+    contractAddress = "0x0138A6124eCb4741058Faeef5e38C26638a4Ae26";
     ABI = contr.abi;
     const provider_contract = new ethers.Contract(
       contractAddress,
@@ -124,7 +123,7 @@ export default function RouteName() {
     const newsignedContract = new ethers.Contract(contractAddress, ABI, signer);
     //console.log(await newsignedContract.getTokenId());
     try {
-      const mintedtx = await newsignedContract.mint();
+      const mintedtx = await newsignedContract.mint("20635f71a89de4d23bbd00ce1fa7419c93f6111f4db175c38ea03d8efc3194de");
 
       const getTokenId = await newsignedContract.getTokenId();
       const tokenId = getTokenId._hex;
@@ -187,7 +186,6 @@ export default function RouteName() {
         <div className="flex flex-col items-center justify-center">
           <YourComponent setAadhar={setAadhar} setDob={setDob} setName={setName} />
         </div>
-
 
         <div className="flex justify-between gap-2">
           
@@ -312,11 +310,8 @@ export default function RouteName() {
         {showStatus && otpStatus === "APPROVED" && (
           <div className="flex flex-col gap-2 items-center justify-center">
             <Button
-              
               variant="contained"
               color="primary"
-
-              
               className="text-white bg-orange-500 hover:bg-orange-600 w-full md:w-2/5"
               onClick={async () => {
                 await mint();
@@ -336,21 +331,21 @@ export default function RouteName() {
         )}
       </div>
       {showImage && (
-  <div>
-    <div className="flex flex-col gap-2 items-center justify-center mb-12">
-      <div className={`${styles.confettiWrapper} fixed inset-0 z-50`}>
-        <Confetti width={window.innerWidth} height={window.innerHeight} />
-      </div>
-      <div className={`${styles.modal} fixed inset-0 bg-opacity-50`}>
-        <div className={`${styles.modalContent} p-5 rounded-lg bg-white`}>
-          <p>Your NFT</p>
-          <img src={imageURL} alt="" width={350} height={350} />
-          <a href={URI}>Your MetaData click to see...</a>
+        <div>
+          <div className="flex flex-col gap-2 items-center justify-center mb-12">
+            <div className={`${styles.confettiWrapper} fixed inset-0 z-50`}>
+              <Confetti width={window.innerWidth} height={window.innerHeight} />
+            </div>
+            <div className={`${styles.modal} fixed inset-0 bg-opacity-50`}>
+              <div className={`${styles.modalContent} p-5 rounded-lg bg-white`}>
+                <p>Your NFT</p>
+                <img src={imageURL} alt="" width={350} height={350} />
+                <a href={URI}>Your MetaData click to see...</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
       {OpenSea && (
         <div>
           <div className="flex flex-col gap-2 items-center justify-center mb-12">
@@ -365,14 +360,14 @@ export default function RouteName() {
       )}
       {/* <div className="flex flex-col gap-2 items-center ">
         <div className="absolute bottom-2"> */}
-          {/* <a
+      {/* <a
             className="hover:underline"
             href="https://mumbai.polygonscan.com/address/0x1387938C0761C817d2474ae5e0F8BC243C2B4f17#code"
           >
             Deployed with ❤️ at Polygon Mumbai testnet Click to see the contract
           </a> */}
-      </div>
-      //</div>
+    </div>
+    //</div>
     //</div>
   );
 }
