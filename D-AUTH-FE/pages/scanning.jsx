@@ -101,7 +101,18 @@ const YourComponent = (props) => {
     </div>
   </div>
 
-
+  <div className="inline-block my-3">
+      <label htmlFor="file-input" className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold px-3 py-2 rounded-md shadow-md cursor-pointer flex items-center animate-fade-in">
+        <i className="fas fa-cloud-upload-alt mr-2 text-xs"></i> Choose File
+      </label>
+      <input
+        id="file-input"
+        type="file"
+        onChange={updateImage}
+        accept="image/*"
+        className="hidden"
+      />
+    </div>
 
     <button
       onClick={readAadhar}
@@ -121,7 +132,7 @@ const YourComponent = (props) => {
       Scan Aadhar
     </button>
     
-    <input type="file" onChange={updateImage} accept="image/*" />
+    
     </div>
         
 

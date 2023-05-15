@@ -2,7 +2,7 @@ import { Button, TextField } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState ,useRef} from "react";
 import Header from "../Common/Header";
-
+import Confetti from "react-confetti";
 const axios = require("axios").default;
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import contr from "../../artifacts/contracts/NFT-MINT.sol/NFT_MINT.json";
@@ -189,7 +189,7 @@ export default function RouteName() {
 
         <div className="flex justify-between gap-2">
           
-          <div className="flex flex-col gap-2 items-left justify-right mb-12 border-2 border-red-500 p-2"></div>
+          <div className="flex flex-col gap-2 items-left justify-right mb-12 "></div>
         </div>
 
         <div className="flex justify-center items-center py-8">
@@ -366,7 +366,25 @@ export default function RouteName() {
           >
             Deployed with ❤️ at Polygon Mumbai testnet Click to see the contract
           </a> */}
-    </div>
+          {/* <Button
+              variant="contained"
+              color="primary"
+              className="text-white bg-orange-500 hover:bg-orange-600 w-full md:w-2/5"
+              onClick={async () => {
+                await mint();
+                console.log(imgURL);
+                if (imgURL && imgURL.length != 0) {
+                  setImageURL(imgURL);
+                  setShowImage(true);
+                  setOpenSea(true);
+                  settkid(tId);
+                }
+                console.log("Details submitted");
+              }}
+            >
+              Confirm
+            </Button>
+    </div> */}
     //</div>
     //</div>
   );
