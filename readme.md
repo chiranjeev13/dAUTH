@@ -1,15 +1,17 @@
 # D-Auth
 
-Project is deployed on Polygon mumbai testnet so kindly use matic to interact with the website
+Blockchain is running on AMD Ubuntu server. 
 
 Home page:
-![WhatsApp Image 2022-11-08 at 3 30 32 PM](https://user-images.githubusercontent.com/70687348/200550756-f8a8e73c-9c9d-465b-a87c-0aa1216ab437.jpeg)
+![image](https://github.com/chiranjeev13/dAUTH/assets/94173505/4788fc84-587e-4b5d-8106-eace2dc2a4d0)
+
 
 ## Once authentitcated, always aquainted...
 
 Get your KYC verified using our Zero Knowledge based BlockChain Technology.
 
 Verifying page
-![Screenshot from 2022-11-08 16-51-35](https://user-images.githubusercontent.com/70687348/200551626-52054182-1999-4be8-93ad-df12481d3ee3.png)
+![image](https://github.com/chiranjeev13/dAUTH/assets/94173505/0ccfedc9-5c3d-448b-8779-da03fe4b70bc)
+
 
 
