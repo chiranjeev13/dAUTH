@@ -50,7 +50,8 @@ const YourComponent = (props) => {
          let aadhar = '';
 
         // iterate throug the lines
-        lines.forEach((line) => {
+        for (let i=0; i<lines.length; i++) {
+          const line = lines[i];
 
           const numberRegex = /\d+/g; // Regular expression to match one or more digits
           const matches = line.match(numberRegex); // Find all matches of the regular expression
@@ -58,10 +59,10 @@ const YourComponent = (props) => {
             const number = matches.join('');
             if (number.length > 10) {
               aadhar = number;
-              // console.log(number);
+              break;
             }
           }
-        });
+        };
         console.log(aadhar);
         props.setAadhar(aadhar);
 
