@@ -41,7 +41,7 @@ module.exports = {
     },
 
     localhost: {
-      url:"http://34.131.77.36/",
+      url:"http://34.131.53.173/",
       chainId: 1337,
       accounts: [PRIVATE_KEY],
     },

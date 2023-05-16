@@ -95,7 +95,7 @@ export default function RouteName() {
       );
     }
 
-    contractAddress = "0x0138A6124eCb4741058Faeef5e38C26638a4Ae26";
+    contractAddress = "0xB425f0CF5232B546841DC8575449e14bB70611e6";
     ABI = contr.abi;
     const provider_contract = new ethers.Contract(
       contractAddress,
@@ -123,7 +123,7 @@ export default function RouteName() {
     const newsignedContract = new ethers.Contract(contractAddress, ABI, signer);
     //console.log(await newsignedContract.getTokenId());
     try {
-      const mintedtx = await newsignedContract.mint("20635f71a89de4d23bbd00ce1fa7419c93f6111f4db175c38ea03d8efc3194de");
+      const mintedtx = await newsignedContract.mint();
 
       const getTokenId = await newsignedContract.getTokenId();
       const tokenId = getTokenId._hex;
@@ -307,7 +307,7 @@ export default function RouteName() {
             )}
           </form>
         </div>
-        {showStatus && otpStatus === "APPROVED" && (
+        {/*showStatus && otpStatus === "APPROVED" && */ (
           <div className="flex flex-col gap-2 items-center justify-center">
             <Button
               variant="contained"

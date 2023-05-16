@@ -5,7 +5,7 @@ module.exports = async function ({ getNamedAccounts, deployments }) {
   const { deployer } = await getNamedAccounts();
 
   console.log("----------");
-  const args = [process.env.FRONTEND_CONTRACT_ACCESS_TOKEN];
+  const args = [/*process.env.FRONTEND_CONTRACT_ACCESS_TOKEN*/];
   const NFT_MINT = await deploy("NFT_MINT", {
     from: deployer,
     args: args,

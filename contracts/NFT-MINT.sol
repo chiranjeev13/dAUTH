@@ -4,7 +4,7 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "./stringUtils.sol";
+
 contract NFT_MINT is ERC721, Ownable {
   using Strings for uint256;
 
@@ -15,20 +15,18 @@ contract NFT_MINT is ERC721, Ownable {
   uint256 public totalSupply;
   mapping(address => uint256) private mintedPerWallet;
 
-  uint256 ver = 1;
+  uint256 ver = 3;
   string public baseUri;
   uint256 chk;
 
   uint cp = 0;
   uint256 public tokenId;
 
-  string restricted;
-  constructor(string memory _restricted) ERC721("D-AUTH", "DAU") {
+  constructor() ERC721("D-AUTH", "DAU") {
     baseUri = "https://gateway.pinata.cloud/ipfs/QmPWzKZKYsxnXvYQX2PfN6ab7Y4qAcdNYJZUA4aCo19L3S/";
     tokenId = 0;
     totalSupply = 0;
     chk = 0;
-    restricted = _restricted;
   }
 
   function updateBaseURI(string memory newbaseUri) private onlyOwner {
@@ -37,14 +35,13 @@ contract NFT_MINT is ERC721, Ownable {
 
   // Public Functions
 
-  function mint(string memory pvtaccess) public payable returns (uint256) {
+  function mint() external payable returns (uint256) {
     require(!verified[msg.sender], "Already verified");
     require(isSaleActive, "The sale is paused.");
     require(
       mintedPerWallet[msg.sender] == 0,
       "You cannot mint that many total."
     );
-    require(StringUtils.equal(pvtaccess,restricted));
     uint256 curTotalSupply = totalSupply;
     require(curTotalSupply + _numTokens <= MAX_TOKENS, "Exceeds total supply.");
     tokenId = tokenId + 1;
@@ -105,27 +102,5 @@ contract NFT_MINT is ERC721, Ownable {
       bytes(baseURI).length > 0
         ? string(abi.encodePacked(baseURI, tokenId.toString(), ".json"))
         : "";
-  }
-
-  function safeTransferFrom(
-    address from,
-    address to,
-    uint256 tId
-  ) public virtual override onlyOwner {
-    safeTransferFrom(from, to, tId, "");
-  }
-
-  function transferFrom(
-    address from,
-    address to,
-    uint256 tId
-  ) public virtual override onlyOwner {
-    //solhint-disable-next-line max-line-length
-    require(
-      _isApprovedOrOwner(_msgSender(), tokenId),
-      "ERC721: caller is not token owner nor approved"
-    );
-
-    _transfer(from, to, tId);
   }
 }

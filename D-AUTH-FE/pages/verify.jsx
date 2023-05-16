@@ -24,7 +24,7 @@ export default function RouteName() {
       );
     }
 
-    contractAddress = "0x1387938C0761C817d2474ae5e0F8BC243C2B4f17";
+    contractAddress = "0xB425f0CF5232B546841DC8575449e14bB70611e6";
     ABI = contr.abi;
     const provider_contract = new ethers.Contract(
       contractAddress,
