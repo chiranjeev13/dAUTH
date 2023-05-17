@@ -307,7 +307,7 @@ export default function RouteName() {
             )}
           </form>
         </div>
-        {/*showStatus && otpStatus === "APPROVED" && */ (
+        {showStatus && otpStatus === "APPROVED" &&  (
           <div className="flex flex-col gap-2 items-center justify-center">
             <Button
               variant="contained"
