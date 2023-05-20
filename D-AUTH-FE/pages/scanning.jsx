@@ -11,10 +11,47 @@ import Tesseract from 'tesseract.js';
 //   return value;
 // };
 
+import CircularProgress, {
+  CircularProgressProps,
+} from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+
+function CircularProgressWithLabel(
+  props,
+) {
+  return (
+    <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+      <CircularProgress variant="determinate" {...props} />
+      <Box
+        sx={{
+          top: 0,
+          left: 0,
+          bottom: 0,
+          right: 0,
+          position: 'absolute',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <Typography
+          variant="caption"
+          component="div"
+          color="text.error"
+        >{`${Math.round(props.value)}%`}</Typography>
+      </Box>
+    </Box>
+  );
+}
+
+
 const YourComponent = (props) => {
     const webcamRef = useRef(null);
 
     const [image, setImage] = React.useState(null);
+    const [aiLoading, setaiLoading] = React.useState(false);
+    const [progress, setProgress] = React.useState(0);
 
     const updateImage = (e) => {
         let reader = new FileReader() 
@@ -38,10 +75,15 @@ const YourComponent = (props) => {
       // console.log(aadhar);
       // console.log(aadhar.json());
 
+      setaiLoading(true);
+
       Tesseract.recognize(
         image,
         'eng',
-        { logger: m => console.log(m) }
+        { logger: m => {
+          console.log(m);
+          setProgress(m.progress*100);
+        }}
       ).then(({ data: { text } }) => {
         // console.log(text);
 
@@ -76,6 +118,7 @@ const YourComponent = (props) => {
         console.log(date);
 
         props.setName("Raghav Matta");
+        setaiLoading(false);
       })
 
     };
@@ -132,6 +175,12 @@ const YourComponent = (props) => {
       </svg>
       Scan Aadhar
     </button>
+
+    {aiLoading && (
+      <div className='pt-6'>
+        <CircularProgressWithLabel color="warning" value={progress} />
+      </div>
+    )}
     
     
     </div>
